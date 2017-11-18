@@ -1,0 +1,34 @@
+.stocks-board {
+	.stocks-values {
+		font-size: .9em;
+		
+		.row:nth-child(odd) {
+			background-color: #e6e6e6;
+		}
+		.row-header {
+			background-color: #055477;
+			color: #fff;
+			.col {
+				text-align: center !important;
+			}
+		}
+		.col {
+			display: inline-block;
+			padding: 2px;
+		}
+		.id {
+			width: 50px;
+		}
+		.price {
+			width: 60px;
+			text-align: right;
+		}
+		.date {
+			width: 150px;
+		}
+		.refreshed {
+			background-color: #ff0000;
+			color: #fff;
+		}
+	}
+}

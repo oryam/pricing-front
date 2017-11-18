@@ -1,0 +1,21 @@
+<div *ngIf="stocks" class="stocks-board">
+<form #form="ngForm">
+	<h2>Stocks</h2>
+
+	<button type="button" (click)="onStartStreamStocksChanges()">ON</button>
+	<button type="button" (click)="onStopStreamStocksChanges()">OFF</button>
+
+	<div class="stocks-values">
+		<div class="row-header">
+			<div class="col id"> ID </div>
+			<div class="col price"> PRICE </div>
+			<div class="col date"> DATE </div>
+		</div>
+		<div *ngFor="let stock of stocks" class="row">
+			<div class="col id"> {{ stock.code }} </div> 
+			<div class="col price" [ngClass]="{'refreshed':stock.refreshed}"> {{ stock.price }} € </div>
+			<div class="col date"> {{ stock.date | date:'yyyy-MM-dd HH:mm:ss' }} </div>
+		</div>
+	</div>
+</form>
+</div>
